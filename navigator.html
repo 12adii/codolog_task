@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>navigator function</title>
+        <style>
+                body{
+                        font-family: Arial, Helvetica, sans-serif;
+                        background: white;
+                        text-align: center;
+                        margin-top: auto;
+                        
+
+                }
+                h2{
+                        font-size: 20px;
+                        margin: 10px auto;
+                }
+                button{
+                        padding: 8px 15px;
+                        margin: 5px;
+                        font-size: 16px;
+                        cursor: pointer;
+                        border-radius: 10px;
+                }
+                #result{
+                        padding: 10px 20px;
+                        height:125px ;
+                        margin: auto 50px;
+                        font-size: 15px;
+                        border-radius: 10px;
+                        background: white;
+                        border: 2px solid black;
+
+                }
+        </style>
+</head>
+<body>
+        <h2>navigator function</h2>
+        <button onclick=navdata()> navigator data</button>
+        <p id="result"></p>
+        <script>
+                function navdata(){
+                        let browser=navigator.userAgent;
+                        let language=navigator.language;
+                        let online=navigator.onLine;
+                        let cookie=navigator.cookieEnabled;
+                        let hardware=navigator.hardwareConcurrency;
+                        let patform=navigator.platform;
+                        
+                        let data=
+                        "browser :" + browser + "<br>"+
+                        "language:" + language + "<br>"+
+                        "online :" + online + "<br>"+
+                        "cookie :" + cookie + "<br>"+
+                        "hardware :" + hardware + "<br>"+
+                        "patform :" + patform ;
+                        document.getElementById("result").innerHTML=data;
+                        
+                }
+        </script>
+</body>
+</html>
